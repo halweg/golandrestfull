@@ -2,7 +2,8 @@ package main
 
 import (
 	"errors"
-	"net/http"
+    "fmt"
+    "net/http"
 	"time"
 
 	"apiserver/config"
@@ -22,7 +23,8 @@ var (
 
 func main() {
 	pflag.Parse()
-
+    fmt.Println(*cfg)
+    return
 	// init config
 	if err := config.Init(*cfg); err != nil {
 		panic(err)
